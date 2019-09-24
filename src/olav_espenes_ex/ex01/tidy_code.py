@@ -3,6 +3,8 @@ __email__ = 'olaves@nmbu.no'
 
 
 from random import randint
+
+
 def your_guess():
     input_guess = 0
     while input_guess < 1:
