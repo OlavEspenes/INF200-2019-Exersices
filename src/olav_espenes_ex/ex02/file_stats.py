@@ -5,11 +5,11 @@ def char_counts(textfilename):
     with open(textfilename, 'r') as myfile:
         data = myfile.read()
         counter = {}
-        for k in data:
-            if ord(k) in counter:
-                counter[ord(k)] += 1
+        for element in data:
+            if ord(element) in counter:
+                counter[ord(element)] += 1
             else:
-                counter[ord(k)] = 1
+                counter[ord(element)] = 1
         dict_a = {key: 0 for key in range(256)}
         dict_a.update(counter)
         list_a = list(dict_a.values())
