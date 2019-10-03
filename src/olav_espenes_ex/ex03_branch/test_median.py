@@ -22,4 +22,10 @@ def test_one_element_median():
     """
     assert median([3]) == 3
 
+def test_odd_numbers_median():
+    """Test that median works on lists with odd numbers.
+    """
+    data = [3, 9, 7, 11, 1]
+    assert median(data) == 7
+
 
