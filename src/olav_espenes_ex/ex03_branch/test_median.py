@@ -65,6 +65,11 @@ def test_original_data_unchanged():
     median(original_data)
     assert original_data == [2, 4, 6, 8, 10]
 
+def test_tuples():
+    tuples = {1, 3, 5, 7, 9}
+    list = [1, 3, 5, 7, 9]
+    assert median(tuples) == median(list)
+
 
 
 
