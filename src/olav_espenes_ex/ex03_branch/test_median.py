@@ -28,4 +28,10 @@ def test_odd_numbers_median():
     data = [3, 9, 7, 11, 1]
     assert median(data) == 7
 
+def test_even_numbers_median():
+    """Test that median works on lists with even numbers.
+    """
+    data = [8, 6, 2, 4, 12]
+    assert median(data) == 6
+
 
