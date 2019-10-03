@@ -18,8 +18,5 @@ def median(data):
         else 0.5 * (sdata[n//2 - 1] + sdata[n//2]))
 
 
-def test_one_element_median():
-    """Test that median works on one element list.
-    """
-    assert median([3]) == 3
+
 
