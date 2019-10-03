@@ -41,6 +41,10 @@ def test_ordered_list_median():
     data = [1, 2, 3, 4, 5]
     assert median(data) == 3
 
-    
+def test_revers_ordered_median():
+    """Test that median works on revers-ordered lists
+    """
+    data = [5, 4, 3, 2, 1]
+    assert median(data) == 3
 
 
