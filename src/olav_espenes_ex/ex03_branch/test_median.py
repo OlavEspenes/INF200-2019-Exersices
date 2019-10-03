@@ -60,5 +60,12 @@ def test_value_error():
     with pytest.raises(ValueError):
         median([])
 
+def test_original_data_unchanged():
+    original_data = [2, 4, 6, 8, 10]
+    median(original_data)
+    assert original_data == [2, 4, 6, 8, 10]
+
+
+
 
 
