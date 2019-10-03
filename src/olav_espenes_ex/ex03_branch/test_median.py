@@ -47,4 +47,13 @@ def test_revers_ordered_median():
     data = [5, 4, 3, 2, 1]
     assert median(data) == 3
 
+def test_unordered_elements_median():
+    """Test that median works on lists with unordered elements
+    """
+    data = [5, 7, 2, 13, 9, 1]
+    assert median(data) == 6
+
+
+
+
 
