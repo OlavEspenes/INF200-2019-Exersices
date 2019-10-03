@@ -11,7 +11,8 @@ def median(data):
     :param data: An iterable of containing numbers
     :return: Median of data
     """
-
+    if data == []:
+        raise ValueError
     sdata = sorted(data)
     n = len(sdata)
     return (sdata[n//2] if n % 2 == 1
