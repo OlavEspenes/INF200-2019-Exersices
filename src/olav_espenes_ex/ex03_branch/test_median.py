@@ -3,6 +3,8 @@
 __author__ = 'Olav Vikoren Espenes'
 __email__ = 'olaves@nmbu.no'
 
+import pytest
+
 
 def median(data):
     """
@@ -54,7 +56,9 @@ def test_unordered_elements_median():
     data = [5, 7, 2, 13, 9, 1]
     assert median(data) == 6
 
-
+def test_value_error():
+    with pytest.raises(ValueError):
+        median([])
 
 
 
