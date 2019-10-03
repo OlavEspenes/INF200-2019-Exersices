@@ -35,3 +35,12 @@ def test_even_numbers_median():
     assert median(data) == 6
 
 
+def test_ordered_list_median():
+    """Test that median works on ordered lists.
+    """
+    data = [1, 2, 3, 4, 5]
+    assert median(data) == 3
+
+    
+
+
