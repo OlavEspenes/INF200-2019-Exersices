@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
+from hypothesis import given, strategies
+
 
 __author__ = 'Olav Vikoren Espenes'
 __email__ = 'olaves@nmbu.no'
-
-
-from hypothesis import given, strategies
 
 
 def bubble_sort(file):
@@ -16,7 +15,8 @@ def bubble_sort(file):
     for element in range(length_list):
         for sec_element in range(length_list - element - 1):
             if data_list[sec_element] > data_list[sec_element + 1]:
-                data_list[sec_element], data_list[sec_element + 1] = data_list[sec_element + 1], data_list[sec_element]
+                data_list[sec_element], data_list[sec_element + 1] = \
+                    data_list[sec_element + 1], data_list[sec_element]
     return data_list
 
 
@@ -36,9 +36,6 @@ def test_sorted_is_not_original():
     """
     data = [3, 2, 1]
     assert bubble_sort(data) != data
-
-
-
 
 
 def test_original_unchanged():
