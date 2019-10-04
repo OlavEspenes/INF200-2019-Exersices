@@ -21,13 +21,15 @@ def bubble_sort(file):
 
 
 def test_empty():
-    """Test that the sorting function works for empty list"""
+    """Test that the sorting function works for empty list.
+    """
 
     assert bubble_sort([]) == []
 
 
 def test_single():
-    """Test that the sorting function works for single-element list"""
+    """Test that the sorting function works for single-element list.
+    """
     assert bubble_sort([1]) == [1]
 
 
@@ -55,14 +57,16 @@ def test_sort_sorted():
 
 
 def test_sort_reversed():
-    """Test that sorting works on reverse-sorted data."""
+    """Test that sorting works on reverse-sorted data.
+    """
 
     data = [3, 2, 1]
     assert bubble_sort(data) == [1, 2, 3]
 
 
 def test_sort_all_equal():
-    """Test that sorting handles data with identical elements."""
+    """Test that sorting handles data with identical elements.
+    """
 
     data = [1, 1, 1]
     assert bubble_sort(data)

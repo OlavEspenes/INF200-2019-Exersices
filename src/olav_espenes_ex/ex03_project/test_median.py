@@ -46,31 +46,37 @@ def test_ordered_list_median():
 
 
 def test_revers_ordered_median():
-    """Test that median works on revers-ordered lists
+    """Test that median works on revers-ordered lists.
     """
     data = [5, 4, 3, 2, 1]
     assert median(data) == 3
 
 
 def test_unordered_elements_median():
-    """Test that median works on lists with unordered elements
+    """Test that median works on lists with unordered elements.
     """
     data = [5, 7, 2, 13, 9, 1]
     assert median(data) == 6
 
 
 def test_value_error():
+    """Test if median print ValueError for empty lists in input.
+    """
     with pytest.raises(ValueError):
         median([])
 
 
 def test_original_data_unchanged():
+    """Test to check if median leaves input data unchanged.
+    """
     original_data = [2, 4, 6, 8, 10]
     median(original_data)
     assert original_data == [2, 4, 6, 8, 10]
 
 
 def test_tuples():
+    """Test to check if median also work on tuples.
+    """
     tuples = {1, 3, 5, 7, 9}
     alist = [1, 3, 5, 7, 9]
     assert median(tuples) == median(alist)
