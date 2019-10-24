@@ -6,6 +6,7 @@ Acceptance test suite for EX04.
 Your code should pass these tests before submission.
 """
 
+
 import pytest
 from myrand import LCGRand, ListRand
 from walker import Walker
