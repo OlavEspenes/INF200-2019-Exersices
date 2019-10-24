@@ -6,10 +6,9 @@ Acceptance test suite for EX04.
 Your code should pass these tests before submission.
 """
 
-
 import pytest
-from myrand import LCGRand, ListRand
-from walker import Walker
+from .myrand import LCGRand, ListRand
+from .walker import Walker
 
 __author__ = 'Hans Ekkehard Plesser'
 __email__ = 'hans.ekkehard.plesser@nmbu.no'
@@ -42,4 +41,3 @@ def test_walker():
     assert w.get_position() != start
     w.move()
     assert w.get_steps() == 2
-

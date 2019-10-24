@@ -10,7 +10,6 @@ class LCGRand:
         self.a = 16807
         self.m = 2 ** 31 - 1
 
-
     def rand(self):
         while True:
             self.seed = self.a * self.seed % self.m
@@ -18,8 +17,8 @@ class LCGRand:
 
 
 class ListRand:
-    def __init__(self, list):
-        self.list = list
+    def __init__(self, a_list):
+        self.list = a_list
         self.idx = 0
 
     def rand(self):
@@ -30,7 +29,7 @@ class ListRand:
             return self.list[self.idx-1]
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     LCG = LCGRand(20)
     LR = ListRand([1, 2, 3])
     for _ in range(3):
