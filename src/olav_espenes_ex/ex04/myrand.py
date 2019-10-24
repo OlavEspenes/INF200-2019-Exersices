@@ -25,7 +25,7 @@ class ListRand:
         self.idx += 1
         if self.idx > len(self.list):
             raise RuntimeError('Cannot make a list longer then input')
-        else
+        else:
             return self.list[self.idx-1]
 
 
