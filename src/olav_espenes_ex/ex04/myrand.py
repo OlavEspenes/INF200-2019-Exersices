@@ -29,5 +29,9 @@ class ListRand:
             return self.list[self.idx-1]
 
 
-
-
+if __name__=='__main__':
+    LCG = LCGRand(20)
+    LR = ListRand([1, 2, 3])
+    for _ in range(3):
+        print(LCG.rand())
+        print(LR.rand())
