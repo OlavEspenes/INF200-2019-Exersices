@@ -3,6 +3,7 @@
 __author__ = 'Olav Espenes'
 __email__ = 'olaves@nmbu.no'
 
+
 class LCGRand:
     def __init__(self, seed):
         self.seed = seed

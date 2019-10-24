@@ -16,19 +16,24 @@ class Walker:
         throw = random.uniform(0, 2)
         self.position += 1 if throw >= 1 else -1
 
+
     def is_at_home(self):
         return True if self.position == self. home else False
+
 
     def get_position(self):
         return self.position
 
+
     def get_steps(self):
         return self.steps
+
 
     def walk_me_home_return_steps(self):
         while not self.is_at_home():
             self.move()
         return self.steps
+
 
 
 if __name__=='__main__':
