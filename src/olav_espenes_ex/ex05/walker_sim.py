@@ -33,4 +33,11 @@ class Simulation:
 
     def single_walk(self):
         a_walker = Walker(self.start, self.home)
+        while not a_walker.is_at_home()
+            a_walker.move()
+        return a_walker.get_steps()
+
+    def run_simulation(self, num_walks):
+        return[self.single_walk() for _ in range(num_walks)]
+    
         
