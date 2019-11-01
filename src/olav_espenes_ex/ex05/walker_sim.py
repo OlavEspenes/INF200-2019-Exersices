@@ -41,8 +41,9 @@ class Simulation:
         return[self.single_walk() for _ in range(num_walks)]
 
 if __name__=='__main__':
-    seed = [12345, 12345, 54321]
-    for one_seed in range(1,3):
-        print(Simulation(0,10,seed(one_seed)).run_simualtion(20))
-    for one_seed in range(1,3):
-        print(Simulation(10,0,seed(one_seed)).run_simulation(20))
+    seed_list = list([12345, 12345, 54321])
+    length_seed = len(seed_list)
+    for one_seed in range(length_seed):
+        print(Simulation(0,10,seed_list(one_seed)).run_simualtion(20))
+    for one_seed in range(length_seed):
+        print(Simulation(10,0,seed_list(one_seed)).run_simulation(20))
