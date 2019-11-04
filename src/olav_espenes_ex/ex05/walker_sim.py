@@ -5,6 +5,7 @@ __email__ = 'olaves@nmbu.no'
 
 import random
 
+
 class Walker:
     def __init__(self, start, home):
         self.position = start
@@ -25,6 +26,7 @@ class Walker:
     def get_steps(self):
         return self.steps
 
+
 class Simulation:
     def __init__(self, start, home, seed):
         self.start = start
@@ -40,7 +42,8 @@ class Simulation:
     def run_simulation(self, num_walks):
         return[self.single_walk() for _ in range(num_walks)]
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     seed_list = [12345, 12345, 54321]
     length_seed = len(seed_list)
     for one_seed in range(length_seed):

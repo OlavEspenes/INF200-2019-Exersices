@@ -13,6 +13,7 @@ class BoundedWalker(Walker):
         super().__init__(start, home)
         self.left_limit = left_limit
         self.right_limit = right_limit
+        self.position = start
 
         if not (left_limit <= start <= right_limit):
             raise ValueError('The start position is not inside the input'
@@ -22,12 +23,12 @@ class BoundedWalker(Walker):
                              ' interval limit')
 
     def move(self):
-
         super().move()
         if self.position < self.left_limit:
             self.position = self.left_limit
         elif self.position > self.right_limit:
             self.position = self.right_limit
+
 
 class BoundedSimulation(Simulation):
 
@@ -46,7 +47,9 @@ class BoundedSimulation(Simulation):
             steps += 1
         return steps
 
+
 if __name__ == '__main__':
     for l_limit in [0, -10, -100, -1000, -10000]:
-        a_walk = BoundedSimulation(0, 20, 12345, l_limit, 20).run_simulation(20)
+        a_walk = BoundedSimulation(0, 20, 12345,
+                                   l_limit, 20).run_simulation(20)
         print('Left boundary: {}: {}'.format(l_limit, a_walk))
