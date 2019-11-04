@@ -46,16 +46,3 @@ class RandIter:
         if self.num_generated_numbers == self.length:
             raise StopIteration
         return self.generator.rand()
-
-
-class ListRand:
-    def __init__(self, a_list):
-        self.list = a_list
-        self.idx = 0
-
-    def rand(self):
-        self.idx += 1
-        if self.idx > len(self.list):
-            raise RuntimeError('Cannot make a list longer then input')
-        else:
-            return self.list[self.idx-1]
