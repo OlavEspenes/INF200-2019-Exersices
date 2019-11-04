@@ -7,12 +7,12 @@ __email__ = 'olaves@nmbu.no'
 class LCGRand:
     def __init__(self, seed):
         self.seed = seed
-        self.a = 16807
+        self.a = 7**5
         self.m = 2 ** 31 - 1
 
     def rand(self):
         while True:
-            self.seed = self.a * self.seed % self.m
+            self.seed = (self.a * self.seed) % self.m
             return self.seed
 
     def random_sequence(self, length):
@@ -47,10 +47,6 @@ class RandIter:
         if self.num_generated_numbers == self.length:
             raise StopIteration
         return self.generator.rand()
-
-
-
-
 
 
 class ListRand:
